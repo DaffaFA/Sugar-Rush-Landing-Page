@@ -1,0 +1,23 @@
+{
+  "name": "sugar-rush-landing-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daffa Dziban Fadia",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaffaFA/Sugar-Rush-Landing-Page.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DaffaFA/Sugar-Rush-Landing-Page/issues"
+  },
+  "homepage": "https://github.com/DaffaFA/Sugar-Rush-Landing-Page#readme",
+  "description": "",
+  "dependencies": {
+    "flexboxgrid": "^6.3.1",
+    "normalize.css": "^8.0.1"
+  }
+}
