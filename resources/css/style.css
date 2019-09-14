@@ -1,8 +1,51 @@
-@import url("https://fonts.googleapis.com/css?family=Quattrocento:400,700|Raleway:200,200i|Trirong:300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Quattrocento:400,700|Raleway:200,200i,400|Montserrat:600|Trirong:300&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-family: "Quattrocento", serif;
+  text-rendering: optimizeLegibility;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  color: #303030;
+  font-weight: 200;
+  letter-spacing: 3px;
+  font-size: 36pt;
+  margin: 20px 0;
+}
+
+.section-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22pt;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 50px 0;
+}
+
+.subtitle {
+  font-family: "Trirong", serif;
+  color: #303030;
+  font-weight: 300;
+  font-size: 18pt;
+}
+
+.paragraph {
+  color: #303030;
+  letter-spacing: 1.5px;
+  font-size: 13pt;
 }
 
 @keyframes brand-anim {
@@ -10,6 +53,17 @@
     stroke-dashoffset: 0;
   }
 }
+@keyframes brand-anim-fade {
+  100% {
+    stroke-dashoffset: inherit;
+  }
+}
+.btn {
+  padding: 10px 15px;
+  border: 1px solid black;
+  font-family: "Montserrat", sans-serif;
+}
+
 .animate {
   animation: brand-anim 3s ease forwards;
 }
@@ -27,57 +81,131 @@ header {
   background-repeat: no-repeat;
   background-position: center;
 }
-header .brand-logo {
-  width: 50px;
+header .navbar {
+  margin: 10px 0 0 0;
+}
+header .navbar .navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .navbar .navbar-brand {
+  margin: 0;
+}
+header .navbar .navbar-brand #brand {
+  width: 300px;
   height: auto;
 }
-header .brand-hero {
-  position: absolute;
-  top: 55%;
-  left: 35%;
-  transform: translate(-50%, -50%);
+header .navbar .navbar-brand #brand path:nth-last-child(1) {
+  stroke-dasharray: 758;
+  stroke-dashoffset: 758;
 }
-header .brand-hero svg#brand {
-  width: 450px;
+header .navbar .navbar-brand #brand path:nth-last-child(2) {
+  stroke-dasharray: 355;
+  stroke-dashoffset: 355;
 }
-header .brand-hero svg#brand path {
-  stroke: #181818;
+header .navbar .navbar-brand #brand path:nth-last-child(3) {
+  stroke-dasharray: 425;
+  stroke-dashoffset: 425;
 }
-header .brand-hero svg#brand path:nth-last-child(1) {
-  stroke-dasharray: 466.81;
-  stroke-dashoffset: 466.81;
+header .navbar .navbar-brand #brand path:nth-last-child(4) {
+  stroke-dasharray: 1006;
+  stroke-dashoffset: 1006;
 }
-header .brand-hero svg#brand path:nth-last-child(2) {
-  stroke-dasharray: 398;
-  stroke-dashoffset: 398;
+header .navbar .navbar-brand #brand path:nth-last-child(5) {
+  stroke-dasharray: 325;
+  stroke-dashoffset: 325;
 }
-header .brand-hero svg#brand path:nth-last-child(3) {
-  stroke-dasharray: 411;
-  stroke-dashoffset: 411;
+header .navbar .navbar-brand #brand path:nth-last-child(6) {
+  stroke-dasharray: 509;
+  stroke-dashoffset: 509;
 }
-header .brand-hero svg#brand path:nth-last-child(4) {
-  stroke-dasharray: 611;
-  stroke-dashoffset: 611;
+header .navbar .navbar-brand #brand path:nth-last-child(7) {
+  stroke-dasharray: 803;
+  stroke-dashoffset: 803;
 }
-header .brand-hero svg#brand path:nth-last-child(5) {
-  stroke-dasharray: 235;
-  stroke-dashoffset: 235;
+header .navbar .navbar-brand #brand path:nth-last-child(8) {
+  stroke-dasharray: 425;
+  stroke-dashoffset: 425;
 }
-header .brand-hero svg#brand path:nth-last-child(6) {
-  stroke-dasharray: 493;
-  stroke-dashoffset: 493;
+header .navbar .navbar-brand #brand path:nth-last-child(9) {
+  stroke-dasharray: 691;
+  stroke-dashoffset: 691;
 }
-header .brand-hero svg#brand path:nth-last-child(7) {
-  stroke-dasharray: 668;
-  stroke-dashoffset: 688;
+header .navbar .navigation {
+  margin-left: auto;
 }
-header .brand-hero svg#brand path:nth-last-child(8) {
-  stroke-dasharray: 411;
-  stroke-dashoffset: 411;
+header .navbar .navigation ul {
+  list-style: none;
 }
-header .brand-hero svg#brand path:nth-last-child(9) {
-  stroke-dasharray: 528;
-  stroke-dashoffset: 528;
+header .navbar .navigation ul li {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 12pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s;
+}
+header .navbar .navigation ul li:hover {
+  border-bottom: 2px solid #E8E8E8;
+}
+header .navbar .navigation ul li a {
+  color: #303030;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+header .hero-text {
+  display: block;
+  margin-top: 100px;
+}
+header .hero-text p.paragraph {
+  margin-bottom: 40px;
+}
+header .hero-text .icon-showmore {
+  border-radius: 50%;
+  border: 1.5px solid #303030;
+  font-size: 32pt;
+  background: transparent;
+  transition: all 0.5s;
+  color: #303030;
+}
+header .hero-text .icon-showmore:hover {
+  color: #E8E8E8;
+  background: #303030;
+  border: 1.5px solid #303030;
+}
+header .hero-text .icon-showmore::before {
+  padding: 10px;
+  vertical-align: -5px;
+}
+header .hero-text .btn {
+  color: #303030;
+  text-decoration: none;
+  transition: all 0.5s;
+  background: transparent;
+}
+header .hero-text .btn:hover {
+  background: #303030;
+  border: 1.5px solid #F5F5F5;
+}
+
+#about {
+  background: #F5F5F5;
+}
+#about .parallax {
+  width: 100%;
+}
+#about .parallax .image-wrapper {
+  padding: 10px;
+  background: #F2F2F2;
+  border-radius: 3px;
+  box-shadow: 5px 5px 15px #D5D5D5, -5px -5px 15px #D5D5D5;
+  height: 100%;
+}
+#about .parallax .image-wrapper img {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

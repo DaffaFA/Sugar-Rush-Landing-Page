@@ -18,6 +18,7 @@
   "description": "",
   "dependencies": {
     "flexboxgrid": "^6.3.1",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "rellax": "^1.10.0"
   }
 }
